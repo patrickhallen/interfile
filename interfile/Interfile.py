@@ -5,7 +5,12 @@
 # Oct 2013, Helsinki 
 
 __all__ = ['FileParser','load','listmode_to_sinogram']
-from StringIO import StringIO
+# Works with 2.6, 2.7 and 3
+try:
+    from io import StringIO
+except: # 2.5
+    from StringIO import StringIO
+
 import json
 import os
 
