@@ -181,7 +181,7 @@ class LineParser():
         # delete bracers
         s = s.translate(None, "{},")
         list = []
-        for x in s.split():
+        for x in s.split(","):
             try:
                 list.append(int(x))
             except (TypeError, ValueError):
