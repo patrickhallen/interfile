@@ -184,7 +184,7 @@ class LineParser():
 
     def _parse_list(self, s):
         # delete bracers
-        s = s.translate(None, "{},")
+        s = s.replace("{", "").replace("}", "")
         list = []
         for x in s.split(","):
             try:
